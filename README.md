@@ -66,7 +66,7 @@ This repository is **explicitly** designed for Aorus Z390 Pro i7-9700K RX580 to 
 
 ### Deployment
 
-#### 1. BIOS
+#### 1. BIOS Firmware and Settings
 
 I would highly suggest you to upgrade you BIOS firmware to **12d** and apply the profile I created in the `/repositoryRoot/BIOS/`. This would allows you to unlock your motherboard CFG, allowing you to use native NVRAM. 
 
