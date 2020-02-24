@@ -1,19 +1,19 @@
-# Z390-Aorus-Pro-i7-9700K-RX580
+# Gigabyte Aorus Z390 Pro i7-9700K RX580
 ### Introduction
 
-This repository is **explicitly** designed for Z390-Aorus-Pro-i7-9700K-RX580 to run Catalina 10.15.[1-2] with no hassle. However, due to the time constraint, a step by step installation guide won't be covered in this guide. For more information (regarding installation), please check [[Guide] Creating OSX Installer by Rehabman](https://www.tonymacx86.com/threads/guide-booting-the-os-x-installer-on-laptops-with-clover.148093/) or installing [Mojave 10.15.x](https://mirrors.dtops.cc/iso/MacOS/daliansky_macos/) with [Etcher](https://www.balena.io/etcher/).
+This repository is **explicitly** designed for Aorus Z390 Pro i7-9700K RX580 to run Catalina 10.15.[1-2] with no hassle. However, due to the time constraint, a step by step installation guide won't be covered in this guide. For more information (regarding installation), please check [[Guide] Creating OSX Installer by Rehabman](https://www.tonymacx86.com/threads/guide-booting-the-os-x-installer-on-laptops-with-clover.148093/) or installing [Mojave 10.15.x](https://mirrors.dtops.cc/iso/MacOS/daliansky_macos/) with [Etcher](https://www.balena.io/etcher/).
 
 ![JD72vFcbaO4qmde](https://i.loli.net/2020/02/24/JD72vFcbaO4qmde.jpg)
 
 ### Specs
 
-- **Gigabyte Aorus Pro (M.2 Key B * 2 + PCIe 3.0 x16 * 2 + PCIe2.0 x16 *1)**
+- **Gigabyte Aorus Z390 Pro (M.2 Key B * 2 + PCIe 3.0 x16 * 2 + PCIe2.0 x16 *1)**
 - **Intel i7-9700K** (4.9GHz GHz OC, SMBIOS **iMac19,1**)
 - **OpenCore** (0.5.6)
 - **Be quiet! Dark Rock Pro 4** (250w TDP, highly recommended)
 - **Ballistix DDR4 3200MHz 8G * 2 ** (Overclocked to 3200MHz)
 - **WD Black 2018/PC SN720 NVMe 1T SSD**
-- **Sapphire RX 580 Nitro+ 8G** (*BruceX 5K* Apple Res 422 Master Exporting time 8s)
+- **Sapphire RX 580 Nitro+ 8G** (*BruceX 5K* Apple Res 422 Master Exporting time 8s, connected to 4K monitor via a DP-mDP cable)
 - **Apple BCM94360CD** Wi-Fi/Bluetooth + [M.2 NGFF Key A+E Adapter](https://www.ebay.co.uk/itm/BCM94360CS2-BCM943224PCIEBT2-12-6-Pin-WIFI-wireless-card-module-to-NGFF-M-2/223633015347?hash=item3411910233:g:clQAAOSwI7lcld~Z) 
 - **USB3.1 Gen2 to PCIe Card** (ASM1142 chip-based)
 
@@ -37,6 +37,33 @@ This repository is **explicitly** designed for Z390-Aorus-Pro-i7-9700K-RX580 to 
 
 
 
+### Kext 
+
+| Name     | Note     |
+| ---- | ---- |
+|AppleALC| Fixing onboard audio |
+|CPUFriend| CPU frequency dependency |
+|CPUFriendDataProvider| CPU frequency profile for i7-9700K with iMac19,1 SMBIOS |
+|IntelMausi| Fixing onboard Ethernet |
+|Lilu| Essential Dependency |
+|SMCProcessor| CPU status plugin |
+|SMCSuperIO| IO port status plugin |
+|SystemProfilerMemoryFixup| Fixing memory information in system info page |
+|USBPorts| Defining USB ports of Aorus Z390 Pro |
+|VirtualSMC| Sensors status dependency |
+|[WhateverGreen](https://github.com/bugprogrammer/WhateverGreen)| GPU dependency (the one revised by @bugprogrammer) |
+
+### UEFI Driver
+
+|  Name    | Note      |
+| ---- | ---- |
+|ApfsDriverLoader.efi| Apfs volume support |
+|FwRuntimeServices.efi| Fixing memory |
+|HfsPlus.efi| HFS volumes support |
+|[MemoryAllocation.efi](https://github.com/williambj1/OpenCore-Factory/releases/tag/OpenCore-UEFI-Drivers)| 512MB Memory allocation, mandatory for Aorus Z390 Pro |
+
+
+
 ### Deployment
 
 #### 1. BIOS
@@ -55,8 +82,6 @@ sudo diskutil mount disk2s1 (disk2s1 shall be replaced by your USB identifier)
 6. Reboot.
 
 
-
-
 ### 2. macOS Installation
 
 #### Option 1: GUI (recommended)
@@ -69,29 +94,9 @@ sudo diskutil mount disk2s1 (disk2s1 shall be replaced by your USB identifier)
 - Download Mojave 10.15.2 from App Store
 - [[Guide] Creating OSX Installer by Rehabman](https://www.tonymacx86.com/threads/guide-booting-the-os-x-installer-on-laptops-with-clover.148093/) 
 
-
-
 ### 3. Fixing iServices
 
-* Generate serials with [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) 
-
-	```bash
-	git clone https://github.com/corpnewt/GenSMBIOS
-	cd GenSMBIOS
-	chmod +x GenSMBIOS.command
-	```
-
-* Double click GenSMBIOS.command to run, click `1` to install `macserials` 
-
-* then select `3. Generate SMBIOS`, and enter `iMac19,1`
-
-* Vaildate the **Serial** on [Check Coverage](https://checkcoverage.apple.com/).
-
-* Continue if you get a vaild serial that hasn't been registered.
-
-* Modify your `/EFI/OC/config.plist` with `PlistEdit Pro` or `ProperTree`
-
-* Convert the macserial outputs by following the underneath rules and add them into `/Root/PlatformInfo/Generic/ `
+To use Apple services, you need to have a vaild but unregistered serial (consisting of four attributes, shown as below) patched in your config.plist. For more editing details, please check wiki page: [How to fix iServices](https://github.com/sarkrui/Hackintosh-Z390-Aorus-Pro-9700K-RX580/wiki/How-to-fix-iServices)
 
 ```bash
 Type = SystemProductName
@@ -100,9 +105,18 @@ Board Serial = MLB
 SmUUID = SystemUUID
 ```
 
-![W9yM1sgvnh5PKeN](https://i.loli.net/2020/02/24/W9yM1sgvnh5PKeN.jpg)
+### 4. Dual Boot (Windows)
+
+Using motherboard boot menu would disrupt the deflaut booting order, to resolve so, using OpenCore to boot Windows Boot Manager is one solution. You only need to add a boot entry for your Windows Boot Manager EFI. For more details, please check wiki page: [How to add a boot entry](https://github.com/sarkrui/Hackintosh-Z390-Aorus-Pro-9700K-RX580/wiki/How-to-add-a-boot-entry-in-OpenCore)
+
+
 
 ### Changelog
+
+#### 2020/02/24
+
+* Add WIKI pages
+* Update README
 
 #### 2020/02/23
 
@@ -115,4 +129,4 @@ SmUUID = SystemUUID
 * **OpenCore Bootloader** from [OpenCore Respository](https://github.com/acidanthera/OpenCorePkg)
 * **The best Installation guide I followed** from [OpenCore Vanilla Desktop Guide](https://khronokernel-2.gitbook.io/opencore-vanilla-desktop-guide/)
 * **CFG-locked BIOS profile** retrieved form [AudioGod's Aorus z390 Pro Guide](https://www.insanelymac.com/forum/topic/339980-audiogods-aorus-z390-pro-patched-dsdt-mini-guide-and-discussion/)
-* **MemoryAllocation.efi**, which is explicitly required for addressing the Aorus Z390 Aorus Pro's memory allocation issue retrieved from [UEFI Drivers](https://github.com/williambj1/OpenCore-Factory/releases/tag/OpenCore-UEFI-Drivers) 
+* **MemoryAllocation.efi**, which is explicitly required for addressing the Aorus Z390 Pro's memory allocation issue retrieved from [UEFI Drivers](https://github.com/williambj1/OpenCore-Factory/releases/tag/OpenCore-UEFI-Drivers) 
