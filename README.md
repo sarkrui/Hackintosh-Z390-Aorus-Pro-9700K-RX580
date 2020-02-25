@@ -11,7 +11,7 @@ This repository is **explicitly** designed for Aorus Z390 Pro i7-9700K RX580 to 
 - **Intel i7-9700K** (4.9GHz GHz OC, SMBIOS **iMac19,1**)
 - **OpenCore** (0.5.6)
 - **Be quiet! Dark Rock Pro 4** (250w TDP, highly recommended)
-- **Ballistix DDR4 3200MHz 8G * 2 ** (Overclocked to 3200MHz)
+- **Ballistix DDR4 3200MHz 8G * 2** (Overclocked to 3200MHz)
 - **WD Black 2018/PC SN720 NVMe 1T SSD**
 - **Sapphire RX 580 Nitro+ 8G** (*BruceX 5K* Apple Res 422 Master Exporting time 8s, connected to 4K monitor via a DP-mDP cable)
 - **Apple BCM94360CD** Wi-Fi/Bluetooth + [M.2 NGFF Key A+E Adapter](https://www.ebay.co.uk/itm/BCM94360CS2-BCM943224PCIEBT2-12-6-Pin-WIFI-wireless-card-module-to-NGFF-M-2/223633015347?hash=item3411910233:g:clQAAOSwI7lcld~Z) 
