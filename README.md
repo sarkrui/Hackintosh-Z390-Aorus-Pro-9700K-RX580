@@ -34,6 +34,7 @@ This repository is **explicitly** designed for Aorus Z390 Pro i7-9700K RX580 to 
 
 - **Safari Netflix won't work with my RX580**, but it might work on navi GPUs (e.g. RX5700XT)
 - **Sidecar** and **HEVC** seemed boken on Catalina 10.15.3
+- **Using boot-arg shikigva value and Set to Yes Automatic Platform will Netflix in Safari and Sidecar worked
 
 
 
