@@ -9,7 +9,7 @@ This repository is **explicitly** designed for Aorus Z390 Pro i7-9700K RX580 to 
 
 - **Gigabyte Aorus Z390 Pro (M.2 Key B * 2 + PCIe 3.0 x16 * 2 + PCIe2.0 x16 *1)**
 - **Intel i7-9700K** (4.9GHz GHz OC, SMBIOS **iMac19,1**)
-- **OpenCore** (0.5.6)
+- **OpenCore** (0.5.7)
 - **Be quiet! Dark Rock Pro 4** (250w TDP, highly recommended)
 - **Ballistix DDR4 3200MHz 8G * 2** (Overclocked to 3200MHz)
 - **WD Black 2018/PC SN720 NVMe 1T SSD**
@@ -29,30 +29,34 @@ This repository is **explicitly** designed for Aorus Z390 Pro i7-9700K RX580 to 
 - **HDMI Audio** (**Sound Control** is required to adjust volume)
 - **Onboard HD Audio** (Realtek alc892, layout id: 1)
 - **USB 3.1 Gen2** (may require a USB3.1 Gen2 to PCIe Card, i.g. ASM1142 chip-based)
+- **H264/H265 HW Encode/Decode Supported**
+- **Netflix (1080P) with Safari Supported** (using boot-arg `shikigva` and set `Automatioc Platform` (iMac19,1 SMBIOS not iMacPro1,1 or MacPro7,1) to `Yes`, although Apple TV+ hasn't been tested yet. I do not subscribe to it.)
 
 ### Bugs 
 
-- **Safari Netflix won't work with my RX580**, but it might work on navi GPUs (e.g. RX5700XT)
-- **Sidecar** and **HEVC** seemed boken on Catalina 10.15.3
-- **Using boot-arg `shikigva` and set `Automatioc Platform` (iMac19,1 SMBIOS not iMacPro1,1) to `Yes` will allow Netflix (DRM Contents) to be played in Safari
+- Both Sidecar and DRM Content playback are supported individually, but Safari (playing DRM contents)  will turn to **Black Screen** while using Sidecar.
 
+### To-do
 
+* Future deployment may involve a GC-Titian-Ridge Thunderbolt 3 PCIe adapter card.
+* RX580 might be replaced with a Sapphire VEGA56.
+* Investigation into KVM-Opencore solution to have full performace of macOS and Windows simultaneously.
 
 ### Kext 
 
 | Name     | Note     |
 | ---- | ---- |
-|AppleALC| Fixing onboard audio |
-|CPUFriend| CPU frequency dependency |
-|CPUFriendDataProvider| CPU frequency profile for i7-9700K with iMac19,1 SMBIOS |
-|IntelMausi| Fixing onboard Ethernet |
-|Lilu| Essential Dependency |
-|SMCProcessor| CPU status plugin |
-|SMCSuperIO| IO port status plugin |
-|SystemProfilerMemoryFixup| Fixing memory information in system info page |
-|USBPorts| Defining USB ports of Aorus Z390 Pro |
-|VirtualSMC| Sensors status dependency |
-|[WhateverGreen](https://github.com/bugprogrammer/WhateverGreen)| GPU dependency (the one revised by @bugprogrammer) |
+|**AppleALC**| Fixing onboard audio |
+|**CPUFriend**| CPU frequency dependency |
+|**CPUFriendDataProvider**| CPU frequency profile for i7-9700K with iMac19,1 SMBIOS |
+|**IntelMausi**| Fixing onboard Ethernet |
+|**Lilu**| Essential Dependency |
+|**SMCProcessor**| CPU status plugin |
+|**SMCSuperIO**| IO port status plugin |
+|**SystemProfilerMemoryFixup**| Fixing memory information in system info page |
+|**USBPorts**| Defining USB ports of Aorus Z390 Pro |
+|**VirtualSMC**| Sensors status dependency |
+|**[WhateverGreen](https://github.com/acidanthera/WhateverGreen)**| GPU dependency (v1.3.8 later required) |
 
 ### UEFI Driver
 
