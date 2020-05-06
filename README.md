@@ -34,6 +34,7 @@ This repository is **explicitly** designed for Aorus Z390 Pro i7-9700K RX580 to 
 
 - **Safari Netflix won't work with my RX580**, but it might work on navi GPUs (e.g. RX5700XT)
 - **Sidecar** and **HEVC** seemed boken on Catalina 10.15.3
+- **Using boot-arg `shikigva` and set `Automatioc Platform` (iMac19,1 SMBIOS not iMacPro1,1) to `Yes` will allow Netflix (DRM Contents) to be played in Safari
 
 
 
