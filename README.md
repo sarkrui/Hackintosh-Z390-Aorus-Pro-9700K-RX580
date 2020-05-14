@@ -34,7 +34,7 @@ This repository is **explicitly** designed for Aorus Z390 Pro i7-9700K RX580 to 
 
 ### Bugs 
 
-- Both Sidecar and DRM Content playback are supported individually, but Safari (playing DRM contents)  will turn to **Black Screen** while using Sidecar.
+- Both Sidecar and DRM Content playback are supported individually, but Safari (playing DRM contents)  will turn to **Black Screen** while using Sidecar. Fortunately, there is a dummy solution for that, see pinned [issue](https://github.com/sarkrui/Hackintosh-Z390-Aorus-Pro-9700K-RX580/issues/3). 
 
 ### To-do
 
