@@ -183,41 +183,6 @@
 			<key>#PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)</key>
 			<dict>
 				<key>@0,name</key>
-				<string>ATY,Orinoco</string>
-				<key>@1,name</key>
-				<string>ATY,Orinoco</string>
-				<key>@2,name</key>
-				<string>ATY,Orinoco</string>
-				<key>@3,name</key>
-				<string>ATY,Orinoco</string>
-				<key>AAPL00,DualLink</key>
-				<data>AQAAAA==</data>
-				<key>ATY,Card#</key>
-				<string>109-C94401-00</string>
-				<key>ATY,Copyright</key>
-				<string>Copyright AMD Inc. All Rights Reserved. 2005-2019</string>
-				<key>ATY,DeviceName</key>
-				<string>580X</string>
-				<key>ATY,EFIVersion</key>
-				<string>01.01.183</string>
-				<key>ATY,EFIVersionB</key>
-				<string>113-C944A1XT-014</string>
-				<key>ATY,EFIVersionE</key>
-				<string>113-C9440A-183</string>
-				<key>ATY,FamilyName</key>
-				<string>Radeon Pro</string>
-				<key>ATY,Rom#</key>
-				<string>113-C9440C-171</string>
-				<key>device_type</key>
-				<string>ATY,OrinocoParent</string>
-				<key>hda-gfx</key>
-				<string>onboard-1</string>
-				<key>model</key>
-				<string>AMD Radeon Pro 580X</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)</key>
-			<dict>
-				<key>@0,name</key>
 				<string>ATY,Forrahue</string>
 				<key>@1,name</key>
 				<string>ATY,Forrahue</string>
@@ -265,6 +230,72 @@
 				<string>AMD Radeon Pro 580X</string>
 				<key>revision-id</key>
 				<data>wAA=</data>
+			</dict>
+			<key>#PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)</key>
+			<dict>
+				<key>@0,name</key>
+				<string>ATY,Kamarang</string>
+				<key>@1,name</key>
+				<string>ATY,Kamarang</string>
+				<key>@2,name</key>
+				<string>ATY,Kamarang</string>
+				<key>@3,name</key>
+				<string>ATY,Kamarang</string>
+				<key>AAPL00,DualLink</key>
+				<data>AQAAAA==</data>
+				<key>ATY,Card#</key>
+				<string>109-D000A1-01</string>
+				<key>ATY,Copyright</key>
+				<string>Copyright AMD Inc. All Rights Reserved. 2005-2019</string>
+				<key>ATY,DeviceName</key>
+				<string>Vega 64</string>
+				<key>ATY,EFIVersion</key>
+				<string>016.001.001.000.008771</string>
+				<key>ATY,FamilyName</key>
+				<string>Radeon Pro</string>
+				<key>ATY,Rom#</key>
+				<string>113-D0500300-102</string>
+				<key>device_type</key>
+				<string>ATY,KamarangParent</string>
+				<key>hda-gfx</key>
+				<string>onboard-1</string>
+				<key>model</key>
+				<string>Radeon Pro Vega 64</string>
+				<key>name</key>
+				<string>ATY_GPU</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)</key>
+			<dict>
+				<key>@0,name</key>
+				<string>ATY,Kamarang</string>
+				<key>@1,name</key>
+				<string>ATY,Kamarang</string>
+				<key>@2,name</key>
+				<string>ATY,Kamarang</string>
+				<key>@3,name</key>
+				<string>ATY,Kamarang</string>
+				<key>AAPL00,DualLink</key>
+				<data>AQAAAA==</data>
+				<key>ATY,Card#</key>
+				<string>109-D000A1-01</string>
+				<key>ATY,Copyright</key>
+				<string>Copyright AMD Inc. All Rights Reserved. 2005-2019</string>
+				<key>ATY,DeviceName</key>
+				<string>Vega 56</string>
+				<key>ATY,EFIVersion</key>
+				<string>016.001.001.000.008771</string>
+				<key>ATY,FamilyName</key>
+				<string>Radeon Pro</string>
+				<key>ATY,Rom#</key>
+				<string>113-D0500300-102</string>
+				<key>device_type</key>
+				<string>ATY,KamarangParent</string>
+				<key>hda-gfx</key>
+				<string>onboard-1</string>
+				<key>model</key>
+				<string>Radeon Pro Vega 56</string>
+				<key>name</key>
+				<string>ATY_GPU</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1f,0x3)</key>
 			<dict>
@@ -460,11 +491,43 @@
 			</dict>
 			<dict>
 				<key>BundlePath</key>
-				<string>RadeonBoost.kext</string>
+				<string>VegaTab_56.kext</string>
 				<key>Comment</key>
 				<string></string>
 				<key>Enabled</key>
 				<true/>
+				<key>ExecutablePath</key>
+				<string></string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>BundlePath</key>
+				<string>VegaTab_64.kext</string>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<false/>
+				<key>ExecutablePath</key>
+				<string></string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>BundlePath</key>
+				<string>RadeonBoost.kext</string>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<false/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/PropertyInjector</string>
 				<key>MaxKernel</key>
@@ -871,21 +934,21 @@
 				<key>UIScale</key>
 				<data>Ag==</data>
 			</dict>
+			<key>4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102</key>
+			<dict>
+				<key>rtc-blacklist</key>
+				<data></data>
+			</dict>
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<dict>
 				<key>SystemAudioVolume</key>
 				<data>Rg==</data>
 				<key>boot-args</key>
-				<string>slide=1 darkwake=0 igfxfw=2 shikigva=80 agdpmod=pikera</string>
+				<string>slide=1 darkwake=0 igfxfw=2 shikigva=80 agdpmod=pikera -cdfon</string>
 				<key>csr-active-config</key>
 				<data>5wMAAA==</data>
 				<key>prev-lang:kbd</key>
 				<data>ZW4tVVM6MA==</data>
-			</dict>
-			<key>4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102</key>
-			<dict>
-				<key>rtc-blacklist</key>
-				<data></data>
 			</dict>
 		</dict>
 		<key>Delete</key>

@@ -118,6 +118,10 @@ Using motherboard boot menu would disrupt the deflaut booting order, to resolve 
 
 ### Changelog
 
+#### 2020/06/13
+
+* Add vega56/64 support
+
 #### 2020/02/24
 
 * Add WIKI pages
