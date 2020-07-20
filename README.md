@@ -7,7 +7,7 @@ This repository is **explicitly** designed for Aorus Z390 Pro i7-9700K RX580 to 
 
 ### Specs
 
-- **Gigabyte Aorus Z390 Pro (M.2 Key B * 2 + PCIe 3.0 x16 * 2 + PCIe2.0 x16 *1)**
+- **Gigabyte Aorus Z390 Pro** (M.2 Key B * 2 + PCIe 3.0 x16 * 2 + PCIe2.0 x16 \*1)
 - **Intel i7-9700K** (4.9GHz GHz OC, SMBIOS **iMac19,1**)
 - **OpenCore** (0.5.7)
 - **Be quiet! Dark Rock Pro 4** (250w TDP, highly recommended)
