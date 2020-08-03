@@ -1,7 +1,7 @@
 # Gigabyte Aorus Z390 Pro i7-9700K RX580
 ### Introduction
 
-This repository is **explicitly** designed for Aorus Z390 Pro i7-9700K RX580 to run Catalina 10.15.[1-2] with no hassle. However, due to the time constraint, a step by step installation guide won't be covered in this guide. For more information (regarding installation), please check [[Guide] Creating OSX Installer by Rehabman](https://www.tonymacx86.com/threads/guide-booting-the-os-x-installer-on-laptops-with-clover.148093/) or installing [Mojave 10.15.x](https://mirrors.dtops.cc/iso/MacOS/daliansky_macos/) with [Etcher](https://www.balena.io/etcher/).
+This repository is *exclusively* designed for Aorus Z390 Pro i7-9700K RX580 to run Catalina 10.15.X with no hassle. However, due to the time constraint, a step by step installation guide won't be covered in this guide. For more information (regarding installation), please check [[Guide] Creating OSX Installer by Rehabman](https://www.tonymacx86.com/threads/guide-booting-the-os-x-installer-on-laptops-with-clover.148093/) or installing [Mojave 10.15.x](https://mirrors.dtops.cc/iso/MacOS/daliansky_macos/) with [Etcher](https://www.balena.io/etcher/).
 
 ![JD72vFcbaO4qmde](https://i.loli.net/2020/02/24/JD72vFcbaO4qmde.jpg)
 
@@ -9,7 +9,7 @@ This repository is **explicitly** designed for Aorus Z390 Pro i7-9700K RX580 to 
 
 - **Gigabyte Aorus Z390 Pro** (M.2 Key B * 2 + PCIe 3.0 x16 * 2 + PCIe2.0 x16 \*1)
 - **Intel i7-9700K** (4.9GHz GHz OC, SMBIOS **iMac19,1**)
-- **OpenCore** (0.5.7)
+- **OpenCore** (0.6.0)
 - **Be quiet! Dark Rock Pro 4** (250w TDP, highly recommended)
 - **Ballistix DDR4 3200MHz 8G * 2** (Overclocked to 3200MHz)
 - **WD Black 2018/PC SN720 NVMe 1T SSD**
@@ -39,7 +39,6 @@ This repository is **explicitly** designed for Aorus Z390 Pro i7-9700K RX580 to 
 ### To-do
 
 * Future deployment may involve a GC-Titian-Ridge Thunderbolt 3 PCIe adapter card.
-* RX580 might be replaced with a Sapphire VEGA56.
 * Investigation into KVM-Opencore solution to have full performace of macOS and Windows simultaneously.
 
 ### Kext 
@@ -86,17 +85,16 @@ sudo diskutil mount disk2s1 (disk2s1 shall be replaced by your USB identifier)
 5. Enters BIOS setting again and load the BIOS profile: either `Profile_noCFG_noOC` (if you do not expect to overclock your CPU)
 6. Reboot.
 
-
 ### 2. macOS Installation
+
+**macOS DMG Download**: [link1](https://mirrors.dtops.cc/iso/MacOS/daliansky_macos/), [link2](http://drive.verynerd.info/macOS%20OS/)
 
 #### Option 1: GUI (recommended)
 
-- [Mojave 10.15.2 Download](https://mirrors.dtops.cc/iso/MacOS/daliansky_macos/) (*expired, will be fixed later on*)
 - [Install macOS with etcher](https://www.balena.io/etcher/)
 
 #### Option 2: Command-line
 
-- Download Mojave 10.15.2 from App Store
 - [[Guide] Creating OSX Installer by Rehabman](https://www.tonymacx86.com/threads/guide-booting-the-os-x-installer-on-laptops-with-clover.148093/) 
 
 ### 3. Fixing iServices
