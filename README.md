@@ -87,7 +87,7 @@ sudo diskutil mount disk2s1 (disk2s1 shall be replaced by your USB identifier)
 
 ### 2. macOS Installation
 
-**macOS DMG Download**: [link1](https://mirrors.dtops.cc/iso/MacOS/daliansky_macos/), [link2](http://drive.verynerd.info/macOS%20OS/)
+**macOS DMG Download**: [link1](https://mirrors.dtops.cc/iso/MacOS/daliansky_macos/), [link2](http://drive.verynerd.info/macOS%20OS/), [link3](http://drive.verynerd.info/macOS%20OS/)
 
 #### Option 1: GUI (recommended)
 
@@ -115,6 +115,10 @@ Using motherboard boot menu would disrupt the deflaut booting order, to resolve 
 
 
 ### Changelog
+
+#### 2020/08/09
+
++ Add Big Sur Beta support
 
 #### 2020/06/13
 
