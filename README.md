@@ -41,7 +41,10 @@ This repository is *exclusively* designed for Aorus Z390 Pro i7-9700K RX580 to r
 * Future deployment may involve a GC-Titian-Ridge Thunderbolt 3 PCIe adapter card.
 * Investigation into KVM-Opencore solution to have full performace of macOS and Windows simultaneously.
 
-### Kext 
+
+
+<details>
+<summary> Kext explained</summary>
 
 | Name     | Note     |
 | ---- | ---- |
@@ -57,7 +60,12 @@ This repository is *exclusively* designed for Aorus Z390 Pro i7-9700K RX580 to r
 |**VirtualSMC**| Sensors status dependency |
 |**[WhateverGreen](https://github.com/acidanthera/WhateverGreen)**| GPU dependency (v1.3.8 later required) |
 
-### UEFI Driver
+</details>
+
+
+
+<details>
+<summary> Drivers explained</summary>
 
 |  Name    | Note      |
 | ---- | ---- |
@@ -66,11 +74,12 @@ This repository is *exclusively* designed for Aorus Z390 Pro i7-9700K RX580 to r
 |HfsPlus.efi| HFS volumes support |
 |[MemoryAllocation.efi](https://github.com/williambj1/OpenCore-Factory/releases/tag/OpenCore-UEFI-Drivers)| 512MB Memory allocation, mandatory for Aorus Z390 Pro |
 
-
+</details>
 
 ### Deployment
 
-#### 1. BIOS Firmware and Settings
+<details>
+<summary>1. BIOS Firmware and Settings</summary>
 
 I would highly suggest you to upgrade you BIOS firmware to **12d** and apply the profile I created in the `/repositoryRoot/BIOS/`. This would allows you to unlock your motherboard CFG, allowing you to use native NVRAM. 
 
@@ -85,7 +94,10 @@ sudo diskutil mount disk2s1 (disk2s1 shall be replaced by your USB identifier)
 5. Enters BIOS setting again and load the BIOS profile: either `Profile_noCFG_noOC` (if you do not expect to overclock your CPU)
 6. Reboot.
 
-### 2. macOS Installation
+</details>
+
+<details>
+<summary>2. macOS Installation</summary>
 
 **macOS DMG Download**: [link1](https://mirrors.dtops.cc/iso/MacOS/daliansky_macos/), [link2](http://drive.verynerd.info/macOS%20OS/), [link3](http://drive.verynerd.info/macOS%20OS/)
 
@@ -97,7 +109,10 @@ sudo diskutil mount disk2s1 (disk2s1 shall be replaced by your USB identifier)
 
 - [[Guide] Creating OSX Installer by Rehabman](https://www.tonymacx86.com/threads/guide-booting-the-os-x-installer-on-laptops-with-clover.148093/) 
 
-### 3. Fixing iServices
+</details>
+
+<details>
+<summary>3. Fixing iServices</summary>
 
 To use Apple services, you need to have a vaild but unregistered serial (consisting of four attributes, shown as below) patched in your config.plist. For more editing details, please check wiki page: [How to fix iServices](https://github.com/sarkrui/Hackintosh-Z390-Aorus-Pro-9700K-RX580/wiki/How-to-fix-iServices)
 
@@ -108,11 +123,15 @@ Board Serial = MLB
 SmUUID = SystemUUID
 ```
 
-### 4. Dual Boot (Windows)
+</details>
+
+
+<details>
+<summary> 4. Dual Boot (Windows)</summary>
 
 Using motherboard boot menu would disrupt the deflaut booting order, to resolve so, using OpenCore to boot Windows Boot Manager is one solution. You only need to add a boot entry for your Windows Boot Manager EFI. For more details, please check wiki page: [How to add a boot entry](https://github.com/sarkrui/Hackintosh-Z390-Aorus-Pro-9700K-RX580/wiki/How-to-add-a-boot-entry-in-OpenCore)
 
-
+</details>
 
 ### Changelog
 
