@@ -3,7 +3,7 @@
 
 This repository is *exclusively* designed for Aorus Z390 Pro i7-9700K RX580 to run Catalina 10.15.X with no hassle. However, due to the time constraint, a step by step installation guide won't be covered in this guide. For more information (regarding installation), please check [[Guide] Creating OSX Installer by Rehabman](https://www.tonymacx86.com/threads/guide-booting-the-os-x-installer-on-laptops-with-clover.148093/) or installing [Mojave 10.15.x](https://mirrors.dtops.cc/iso/MacOS/daliansky_macos/) with [Etcher](https://www.balena.io/etcher/).
 
-![JD72vFcbaO4qmde](https://i.loli.net/2020/02/24/JD72vFcbaO4qmde.jpg)
+![JD72vFcbaO4qmde](https://i.imgur.com/pZCXP5H.jpg)
 
 ### Specs
 
@@ -13,7 +13,7 @@ This repository is *exclusively* designed for Aorus Z390 Pro i7-9700K RX580 to r
 - **Be quiet! Dark Rock Pro 4** (250w TDP, highly recommended)
 - **Ballistix DDR4 3200MHz 8G * 2** (Overclocked to 3200MHz)
 - **WD Black 2018/PC SN720 NVMe 1T SSD**
-- **Sapphire RX 580 Nitro+ 8G** (*BruceX 5K* Apple Res 422 Master Exporting time 8s, connected to 4K monitor via a DP-mDP cable)
+- **Sapphire VEGA56 ** (VBIOS flashed to VEGA64, *BruceX 5K* Apple Res 422 Master Exporting time 4s, connected to 4K monitor via a DP-mDP cable)
 - **Apple BCM94360CD** Wi-Fi/Bluetooth + [M.2 NGFF Key A+E Adapter](https://www.ebay.co.uk/itm/BCM94360CS2-BCM943224PCIEBT2-12-6-Pin-WIFI-wireless-card-module-to-NGFF-M-2/223633015347?hash=item3411910233:g:clQAAOSwI7lcld~Z) 
 - **USB3.1 Gen2 to PCIe Card** (ASM1142 chip-based)
 
@@ -32,9 +32,14 @@ This repository is *exclusively* designed for Aorus Z390 Pro i7-9700K RX580 to r
 - **H264/H265 HW Encode/Decode Supported**
 - **Netflix (1080P) with Safari Supported** (using boot-arg `shikigva` and set `Automatioc Platform` (iMac19,1 SMBIOS not iMacPro1,1 or MacPro7,1) to `Yes`, although Apple TV+ hasn't been tested yet. I do not subscribe to it.)
 
+
+
 ### Bugs 
 
 - Both Sidecar and DRM Content playback are supported individually, but Safari (playing DRM contents)  will turn to **Black Screen** while using Sidecar. Fortunately, there is a dummy solution for that, see pinned [issue](https://github.com/sarkrui/Hackintosh-Z390-Aorus-Pro-9700K-RX580/issues/3). 
+- `Hibernation` might not work as expected.
+
+
 
 ### To-do
 
@@ -98,8 +103,10 @@ sudo diskutil mount disk2s1 (disk2s1 shall be replaced by your USB identifier)
 
 <details>
 <summary>2. macOS Installation</summary>
+**macOS DMG Download**: 
 
-**macOS DMG Download**: [link1](https://mirrors.dtops.cc/iso/MacOS/daliansky_macos/), [link2](http://drive.verynerd.info/macOS%20OS/), [link3](http://drive.verynerd.info/macOS%20OS/)
+*  [Link1: mirrors.dtops.cc](https://mirrors.dtops.cc/iso/MacOS/daliansky_macos/)
+*  [Link2: Google Drive hosted](http://drive.verynerd.info/macOS%20OS/)
 
 #### Option 1: GUI (recommended)
 
