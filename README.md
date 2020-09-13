@@ -37,7 +37,7 @@ This repository is *exclusively* designed for Aorus Z390 Pro i7-9700K RX580 to r
 ### Bugs 
 
 - Both Sidecar and DRM Content playback are supported individually, but Safari (playing DRM contents)  will turn to **Black Screen** while using Sidecar. Fortunately, there is a dummy solution for that, see pinned [issue](https://github.com/sarkrui/Hackintosh-Z390-Aorus-Pro-9700K-RX580/issues/3). 
-- `Hibernation` might not work as expected.
+- `Hibernation` might not work as expected or should be disabled for better stability.
 
 
 
@@ -74,10 +74,9 @@ This repository is *exclusively* designed for Aorus Z390 Pro i7-9700K RX580 to r
 
 |  Name    | Note      |
 | ---- | ---- |
-|ApfsDriverLoader.efi| Apfs volume support |
-|FwRuntimeServices.efi| Fixing memory |
+|OpenCanopy.efi| GUI support |
+|OpenRuntime.efi| Fixing memory |
 |HfsPlus.efi| HFS volumes support |
-|[MemoryAllocation.efi](https://github.com/williambj1/OpenCore-Factory/releases/tag/OpenCore-UEFI-Drivers)| 512MB Memory allocation, mandatory for Aorus Z390 Pro |
 
 </details>
 
@@ -135,10 +134,13 @@ SmUUID = SystemUUID
 
 <details>
 <summary> 4. Dual Boot (Windows)</summary>
+*(No longer needed as `scan policy` has been changed to `0` and `darwin` detection has been added in SSDT to apply SSDT mod in macOS.)*
 
 Using motherboard boot menu would disrupt the deflaut booting order, to resolve so, using OpenCore to boot Windows Boot Manager is one solution. You only need to add a boot entry for your Windows Boot Manager EFI. For more details, please check wiki page: [How to add a boot entry](https://github.com/sarkrui/Hackintosh-Z390-Aorus-Pro-9700K-RX580/wiki/How-to-add-a-boot-entry-in-OpenCore)
 
 </details>
+
+
 
 ### Changelog
 
@@ -165,5 +167,5 @@ Using motherboard boot menu would disrupt the deflaut booting order, to resolve 
 
 * **OpenCore Bootloader** from [OpenCore Respository](https://github.com/acidanthera/OpenCorePkg)
 * **The best Installation guide I followed** from [OpenCore Vanilla Desktop Guide](https://khronokernel-2.gitbook.io/opencore-vanilla-desktop-guide/)
-* **CFG-locked BIOS profile** retrieved form [AudioGod's Aorus z390 Pro Guide](https://www.insanelymac.com/forum/topic/339980-audiogods-aorus-z390-pro-patched-dsdt-mini-guide-and-discussion/)
-* **MemoryAllocation.efi**, which is explicitly required for addressing the Aorus Z390 Pro's memory allocation issue retrieved from [UEFI Drivers](https://github.com/williambj1/OpenCore-Factory/releases/tag/OpenCore-UEFI-Drivers) 
+* **CFG-locked BIOS profile, SSDT-PM** retrieved form [AudioGod's Aorus z390 Pro Guide](https://www.insanelymac.com/forum/topic/339980-audiogods-aorus-z390-pro-patched-dsdt-mini-guide-and-discussion/)
+* ~~**MemoryAllocation.efi**, which is explicitly required for addressing the Aorus Z390 Pro's memory allocation issue retrieved from [UEFI Drivers](https://github.com/williambj1/OpenCore-Factory/releases/tag/OpenCore-UEFI-Drivers)~~
