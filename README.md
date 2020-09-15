@@ -5,15 +5,17 @@ This repository is *exclusively* designed for Aorus Z390 Pro i7-9700K RX580 to r
 
 ![JD72vFcbaO4qmde](https://i.imgur.com/pZCXP5H.jpg)
 
+
+
 ### Specs
 
 - **Gigabyte Aorus Z390 Pro** (M.2 Key B * 2 + PCIe 3.0 x16 * 2 + PCIe2.0 x16 \*1)
-- **Intel i7-9700K** (4.9GHz GHz OC, SMBIOS **iMac19,1**)
-- **OpenCore** (0.6.0)
+- **Intel i7-9700K** (4.7GHz GHz No OC, SMBIOS **iMac19,1**)
+- **OpenCore** (0.6.1)
 - **Be quiet! Dark Rock Pro 4** (250w TDP, highly recommended)
 - **Ballistix DDR4 3200MHz 8G * 2** (Overclocked to 3200MHz)
 - **WD Black 2018/PC SN720 NVMe 1T SSD**
-- **Sapphire VEGA56 ** (VBIOS flashed to VEGA64, *BruceX 5K* Apple Res 422 Master Exporting time 4s, connected to 4K monitor via a DP-mDP cable)
+- **Sapphire VEGA56 ** (VBIOS flashed to VEGA64, *BruceX 5K* Apple Res 422 Master Exporting time 4s, connected to 27' 4K monitor via a DP-DP cable)
 - **Apple BCM94360CD** Wi-Fi/Bluetooth + [M.2 NGFF Key A+E Adapter](https://www.ebay.co.uk/itm/BCM94360CS2-BCM943224PCIEBT2-12-6-Pin-WIFI-wireless-card-module-to-NGFF-M-2/223633015347?hash=item3411910233:g:clQAAOSwI7lcld~Z) 
 - **USB3.1 Gen2 to PCIe Card** (ASM1142 chip-based)
 
@@ -23,14 +25,14 @@ This repository is *exclusively* designed for Aorus Z390 Pro i7-9700K RX580 to r
 
 - **dGPU** Hardware Accelaration  (Final Cut Pro X, VideoProc, Compressor tested)
 - **AirDrop, Handoff** (Apple Wi-Fi/Bluetooth required)
-- **SideCar** (with an Apple BT/Wi-FI card both wired or wireless would work)
-- **iMessage** (SystemProductName, SystemSerialNumber, MLB, SystemUUID, are required) 
+- **SideCar** (the same as above )
+- **iMessage** (SystemProductName, SystemSerialNumber, MLB, SystemUUID, are required, see [Fixing iServices](https://github.com/sarkrui/Hackintosh-Z390-Aorus-Pro-9700K-RX580/wiki/How-to-fix-iServices)) 
 - **All Rear USB3.1 USB2.0 Type-C/Type-A Ports** (few USB2.0 ports disabled) 
 - **HDMI Audio** (**Sound Control** is required to adjust volume)
 - **Onboard HD Audio** (Realtek alc892, layout id: 1)
 - **USB 3.1 Gen2** (may require a USB3.1 Gen2 to PCIe Card, i.g. ASM1142 chip-based)
 - **H264/H265 HW Encode/Decode Supported**
-- **Netflix (1080P) with Safari Supported** (using boot-arg `shikigva` and set `Automatioc Platform` (iMac19,1 SMBIOS not iMacPro1,1 or MacPro7,1) to `Yes`, although Apple TV+ hasn't been tested yet. I do not subscribe to it.)
+- **Netflix (1080P) with Safari Supported** (using boot-arg `shikigva=80` and set `Automatioc Platform` (iMac19,1 SMBIOS not iMacPro1,1 nor MacPro7,1) to `Yes`)
 
 
 
@@ -43,7 +45,7 @@ This repository is *exclusively* designed for Aorus Z390 Pro i7-9700K RX580 to r
 
 ### To-do
 
-* Future deployment may involve a GC-Titian-Ridge Thunderbolt 3 PCIe adapter card.
+* Future deployment may involve a `GC-Titian-Ridge Thunderbolt 3 PCIe` adapter card.
 * Investigation into KVM-Opencore solution to have full performace of macOS and Windows simultaneously.
 
 
@@ -80,6 +82,8 @@ This repository is *exclusively* designed for Aorus Z390 Pro i7-9700K RX580 to r
 
 </details>
 
+
+
 ### Deployment
 
 <details>
@@ -106,6 +110,8 @@ sudo diskutil mount disk2s1 (disk2s1 shall be replaced by your USB identifier)
 
 *  [Link1: mirrors.dtops.cc](https://mirrors.dtops.cc/iso/MacOS/daliansky_macos/)
 *  [Link2: Google Drive hosted](http://drive.verynerd.info/macOS%20OS/)
+
+
 
 #### Option 1: GUI (recommended)
 
