@@ -10,7 +10,7 @@ This repository is *exclusively* designed for Aorus Z390 Pro i7-9700K RX580 to r
 ### Specs
 
 - **Gigabyte Aorus Z390 Pro** (M.2 Key B * 2 + PCIe 3.0 x16 * 2 + PCIe2.0 x16 \*1)
-- **Intel i7-9700K** (4.7GHz GHz No OC, SMBIOS **iMac19,1**)
+- **Intel i7-9700K** (4.9GHz GHz No OC, SMBIOS **iMac19,1**)
 - **OpenCore** (0.6.1)
 - **Be quiet! Dark Rock Pro 4** (250w TDP, highly recommended)
 - **Ballistix DDR4 3200MHz 8G * 2** (Overclocked to 3200MHz)
@@ -150,9 +150,13 @@ Using motherboard boot menu would disrupt the deflaut booting order, to resolve 
 
 ### Changelog
 
+#### 2020/09/16
+
+* Add VEGA56/VEGA64 (*turbo fan*) VBIOS with GOP updated to fixed stretched Apple logo.  
+
 #### 2020/08/09
 
-+ Add Big Sur Beta support
+* Add Big Sur Beta support
 
 #### 2020/06/13
 
@@ -160,7 +164,7 @@ Using motherboard boot menu would disrupt the deflaut booting order, to resolve 
 
 #### 2020/02/24
 
-* Add WIKI pages
+* Add wiki pages
 * Update README
 
 #### 2020/02/23
@@ -174,4 +178,5 @@ Using motherboard boot menu would disrupt the deflaut booting order, to resolve 
 * **OpenCore Bootloader** from [OpenCore Respository](https://github.com/acidanthera/OpenCorePkg)
 * **The best Installation guide I followed** from [OpenCore Vanilla Desktop Guide](https://khronokernel-2.gitbook.io/opencore-vanilla-desktop-guide/)
 * **CFG-locked BIOS profile, SSDT-PM** retrieved form [AudioGod's Aorus z390 Pro Guide](https://www.insanelymac.com/forum/topic/339980-audiogods-aorus-z390-pro-patched-dsdt-mini-guide-and-discussion/)
+* **Fixing stretched Apple logo by** [RX VEGA56/64 VBIOS](http://bbs.pcbeta.com/viewthread-1775600-1-1.html)
 * ~~**MemoryAllocation.efi**, which is explicitly required for addressing the Aorus Z390 Pro's memory allocation issue retrieved from [UEFI Drivers](https://github.com/williambj1/OpenCore-Factory/releases/tag/OpenCore-UEFI-Drivers)~~
