@@ -59,8 +59,6 @@
 			<true/>
 			<key>DevirtualiseMmio</key>
 			<true/>
-			<key>DisableLinkeditJettison</key>
-			<false/>
 			<key>DisableSingleUser</key>
 			<false/>
 			<key>DisableVariableWrite</key>
@@ -108,9 +106,7 @@
 				<key>@3,name</key>
 				<string>ATY,Kamarang</string>
 				<key>AAPL00,DualLink</key>
-				<data>
-				AQAAAA==
-				</data>
+				<data>AQAAAA==</data>
 				<key>ATY,Card#</key>
 				<string>109-D000A1-01</string>
 				<key>ATY,Copyright</key>
@@ -200,15 +196,21 @@
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
 				<key>AAPL,ig-platform-id</key>
-				<data>
-				AwCRPg==
-				</data>
+				<data>AwCYPg==</data>
 				<key>AAPL,slot-name</key>
-				<string>Built In</string>
-				<key>device_type</key>
-				<string>Display controller</string>
+				<string>Internal@0,2,0</string>
+				<key>device-id</key>
+				<data>mD4AAA==</data>
+				<key>framebuffer-fbmem</key>
+				<data>AACQAA==</data>
+				<key>framebuffer-patch-enable</key>
+				<data>AQAAAA==</data>
+				<key>framebuffer-stolenmem</key>
+				<data>AAAwAQ==</data>
+				<key>hda-gfx</key>
+				<string>onboard-2</string>
 				<key>model</key>
-				<string>Intel UHD Graphics 630 (Desktop 9 Series)</string>
+				<string>Intel UHD Graphics 630</string>
 			</dict>
 		</dict>
 		<key>Delete</key>
@@ -422,11 +424,9 @@
 		<key>Emulate</key>
 		<dict>
 			<key>Cpuid1Data</key>
-			<data>
-			</data>
+			<data></data>
 			<key>Cpuid1Mask</key>
-			<data>
-			</data>
+			<data></data>
 		</dict>
 		<key>Force</key>
 		<array/>
@@ -444,35 +444,21 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
-				<data>
-				AAQAAAABAAAAAQETIAAAACABAQEAAAAAAAQAAAABAAAA
-				AQIjEAAAABAAAgIAAAAAAAQAAAABAAAAAQMzQAAAACED
-				AwMAAAAAAAQAAAABAAAAAQRDMAAAABECBAQAAAAAAAQA
-				AAABAAAAAQVTYAAAACIFBQUAAAAAAAQAAAABAAAAAQZj
-				UAAAABIEBgYAAAAA
-				</data>
+				<data>AAQAAAABAAAAAQETIAAAACABAQEAAAAAAAQAAAABAAAAAQIjEAAAABAAAgIAAAAAAAQAAAABAAAAAQMzQAAAACEDAwMAAAAAAAQAAAABAAAAAQRDMAAAABECBAQAAAAAAAQAAAABAAAAAQVTYAAAACIFBQUAAAAAAAQAAAABAAAAAQZjUAAAABIEBgYAAAAA</data>
 				<key>Identifier</key>
 				<string>com.apple.kext.AMD9500Controller</string>
 				<key>Limit</key>
 				<integer>0</integer>
 				<key>Mask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
 				<string></string>
 				<key>Replace</key>
-				<data>
-				AAQAAAQDAAAAAQEBAAAAABIEBgEAAAAAAAQAAAQDAAAA
-				AQIBAAAAACIFBAMAAAAAAAgAAAQCAAAAAQMAAAAAABEC
-				AQIAAAAAAAgAAAQCAAAAAQQAAAAAACEDBQQAAAAABAAA
-				AAQAAAAAAQUAAAAAAAAAAwYAAAAAAAQAAAABAAAAAUYB
-				AAAAACABAAAAAAAA
-				</data>
+				<data>AAQAAAQDAAAAAQEBAAAAABIEBgEAAAAAAAQAAAQDAAAAAQIBAAAAACIFBAMAAAAAAAgAAAQCAAAAAQMAAAAAABECAQIAAAAAAAgAAAQCAAAAAQQAAAAAACEDBQQAAAAABAAAAAQAAAAAAQUAAAAAAAAAAwYAAAAAAAQAAAABAAAAAUYBAAAAACABAAAAAAAA</data>
 				<key>ReplaceMask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
 			</dict>
@@ -488,26 +474,21 @@
 				<key>Enabled</key>
 				<false/>
 				<key>Find</key>
-				<data>
-				</data>
+				<data></data>
 				<key>Identifier</key>
 				<string>com.apple.driver.AppleRTC</string>
 				<key>Limit</key>
 				<integer>0</integer>
 				<key>Mask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
 				<string>19.0.0</string>
 				<key>Replace</key>
-				<data>
-				ww==
-				</data>
+				<data>ww==</data>
 				<key>ReplaceMask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
 			</dict>
@@ -523,26 +504,21 @@
 				<key>Enabled</key>
 				<false/>
 				<key>Find</key>
-				<data>
-				</data>
+				<data></data>
 				<key>Identifier</key>
 				<string>com.apple.driver.AppleRTC</string>
 				<key>Limit</key>
 				<integer>0</integer>
 				<key>Mask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
 				<string></string>
 				<key>Replace</key>
-				<data>
-				ww==
-				</data>
+				<data>ww==</data>
 				<key>ReplaceMask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
 			</dict>
@@ -558,26 +534,21 @@
 				<key>Enabled</key>
 				<false/>
 				<key>Find</key>
-				<data>
-				</data>
+				<data></data>
 				<key>Identifier</key>
 				<string>com.apple.driver.AppleACPIPlatform</string>
 				<key>Limit</key>
 				<integer>0</integer>
 				<key>Mask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>MaxKernel</key>
 				<string>18.5.0</string>
 				<key>MinKernel</key>
 				<string>18.5.0</string>
 				<key>Replace</key>
-				<data>
-				ww==
-				</data>
+				<data>ww==</data>
 				<key>ReplaceMask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
 			</dict>
@@ -593,28 +564,21 @@
 				<key>Enabled</key>
 				<false/>
 				<key>Find</key>
-				<data>
-				6AAA//9miYMABQAA
-				</data>
+				<data>6AAA//9miYMABQAA</data>
 				<key>Identifier</key>
 				<string>com.apple.iokit.AppleBCM5701Ethernet</string>
 				<key>Limit</key>
 				<integer>0</integer>
 				<key>Mask</key>
-				<data>
-				/wAA////////////
-				</data>
+				<data>/wAA////////////</data>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
 				<string></string>
 				<key>Replace</key>
-				<data>
-				uLQWAABmiYMABQAA
-				</data>
+				<data>uLQWAABmiYMABQAA</data>
 				<key>ReplaceMask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
 			</dict>
@@ -633,6 +597,8 @@
 			<false/>
 			<key>DisableIoMapper</key>
 			<true/>
+			<key>DisableLinkeditJettison</key>
+			<false/>
 			<key>DisableRtcChecksum</key>
 			<false/>
 			<key>DummyPowerManagement</key>
@@ -731,15 +697,13 @@
 			<key>HaltLevel</key>
 			<integer>2147483648</integer>
 			<key>PasswordHash</key>
-			<data>
-			</data>
+			<data></data>
 			<key>PasswordSalt</key>
-			<data>
-			</data>
-			<key>ScanPolicy</key>
-			<integer>0</integer>
+			<data></data>
 			<key>SecureBootModel</key>
 			<string>Default</string>
+			<key>ScanPolicy</key>
+			<integer>0</integer>
 			<key>Vault</key>
 			<string>Optional</string>
 		</dict>
@@ -796,36 +760,25 @@
 			<key>4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14</key>
 			<dict>
 				<key>DefaultBackgroundColor</key>
-				<data>
-				AAAAAA==
-				</data>
+				<data>AAAAAA==</data>
 				<key>UIScale</key>
-				<data>
-				AQ==
-				</data>
+				<data>AQ==</data>
 			</dict>
 			<key>4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102</key>
 			<dict>
 				<key>rtc-blacklist</key>
-				<data>
-				</data>
+				<data></data>
 			</dict>
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<dict>
 				<key>SystemAudioVolume</key>
-				<data>
-				Rg==
-				</data>
+				<data>Rg==</data>
 				<key>boot-args</key>
-				<string>agdpmod=pikera shikigva=80 darkwake=0 alcid=7 brcmfx-country=NL</string>
+				<string>agdpmod=pikera shikigva=80 darkwake=0 alcid=7 brcmfx-country=NL igfxfw=2</string>
 				<key>csr-active-config</key>
-				<data>
-				ZwAAAA==
-				</data>
+				<data>ZwAAAA==</data>
 				<key>prev-lang:kbd</key>
-				<data>
-				ZW4tVVM6MA==
-				</data>
+				<data>ZW4tVVM6MA==</data>
 			</dict>
 		</dict>
 		<key>Delete</key>
@@ -873,9 +826,10 @@
 			<true/>
 			<key>MLB</key>
 			<string></string>
+			<key>ProcessorType</key>
+			<integer>0</integer>
 			<key>ROM</key>
-			<data>
-			</data>
+			<data></data>
 			<key>SpoofVendor</key>
 			<true/>
 			<key>SystemProductName</key>
